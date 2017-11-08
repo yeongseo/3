@@ -1,0 +1,253 @@
+
+<idoctype html>
+<head>
+	<link href='normalize.css' rel="stylesheet">
+	<script src="scrollByAnimated.js"></script>
+	<style>
+		.section_1{width: 960px; margin:0 auto;position: relative}
+		.section_2{width: 960px; margin:0 auto;position: relative}
+		.section_3{width: 960px; margin:0 auto;position: relative}
+		.section_4{width: 960px; margin:0 auto;position: relative}
+		.section_5{width: 960px; margin:0 auto;position: relative}
+		.section_6{width: 960px; margin:0 auto;position: relative}
+
+		header{height:400px; background:; width:100%; }
+		body{ background:white;position: relative;}
+		header {width:960px; height:44px; position: fixed;left:calc(50% - 480px);z-index: 5555;}
+		header #logo {float:left;  width:100px;height:44px;line-height: 44px;text-align: center;color:black;font-size: 0.8em;font-weight:400;}
+		header #menu {float:right; width:600px;}
+		header #menu li{float:left; width:100px; height: 44px;  line-height:44px;text-align: center;color:black;font-size: 0.8em;font-weight:400;cursor:pointer;}
+		header #menu li:hover{background: #FFCCDA}
+
+		#s1 {transition: all 1s;}
+		#s1_1{transition: all 1s;z-index: 9999;}
+		#s2 {transition: all 1s;}
+		#s3{transition: all 1s;}
+		#s4{transition: all 1s;}
+		#s5{transition: all 1s;}
+		#s6{transition: all 1s;}
+		#myicon {float:left; position:relative;left:50px;top:300px; transition: all 1s;z-index: 50;}
+		#me_st{transition: all 1s;}
+		#sky{transition: all 1s;}
+		#ht{transition:  all 1s;}
+
+		.foot{
+			width:50px; height:50px; 
+			background-repeat:no-repeat;
+			animation: bMove 8s linear;
+		}
+
+		@keyframes bMove{
+			0%{ background-position: 0 100px; opacity:0;}
+			20%{opacity:1;}
+			80%{ opacity:1; }
+			100%{ background-position:0 0;opacity:0;}
+	</style>
+</head>
+
+
+	
+	<header>
+		<div id="logo">
+			Daily life
+		</div>
+		
+	
+
+		<ul id="menu">
+			<li id="m1">1</li>
+			<li id="m2">2</li>
+			<li id="m3">3</li>
+			<li id="m4">4</li>
+			<li id="m5">5</li>
+			<li id="m6">6</li>
+		</ul>
+
+		<div id="myicon" >
+<center> 
+		<img src="mecr.png" style =" width:100px; height:200px";  >
+	</center> 
+	</div>
+		
+	</header>
+
+<body>
+
+
+
+
+<div class="section_1">
+	<h1 id="s1" >
+	<img src="room_1.png" style="width: 960px;height: 1200px; background:url(sky.png);"></h1>
+</div>
+<div class="section_1">
+	<h1 id="s1_1" >
+	<img src="01_1.png" style="margin-top: -380px;z-index: 9999;">
+	</h1>
+</div>
+
+
+<div class="section_2">
+	<h1 id="s2" >
+	<img src="load_1.png" style="width: 960px; height: 900px;">
+</h1>
+</div>
+
+<div class="section_3">
+	<h1 id="s3" >
+	<img src="room_2.png" style="width: 960px;height: 600px; "">
+	</h1>
+</div>
+
+<div class="section_4">
+	<h1 id="s4" >
+	<img src="room_3.png" style="width: 960px;height: 600px;"" >
+	</h1>
+</div>
+
+<div class="section_5">
+	<h1 id="s5" >
+	<img src="load_2.png" style="width: 960px;height: 600px;" >
+	</h1>
+</div>
+
+<div class="section_6">
+	<h1 id="s6" >
+	<img src="room_4.png" style="width: 960px;height: 600px;">
+	</h1>
+</div>
+
+
+
+
+
+<script>
+	window.onload = function(){window.scrollTo(0,0);}
+		
+		m1.onclick = function(){ aniScroll(0); }
+		m2.onclick = function(){ aniScroll(600); }
+		m3.onclick = function(){ aniScroll(1200); }
+		m4.onclick = function(){ aniScroll(1800); }
+		m5.onclick = function(){ aniScroll(2900); }
+		m6.onclick = function(){ aniScroll(3690); }
+		function aniScroll(destination){
+			var distance = destination - document.body.scrollTop;
+			scrollByAnimated(distance, 250);
+		}
+
+
+		
+
+		window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+	
+	
+
+
+		if(scrollH >480){
+			s1_1.style.marginLeft= "95px";
+			s1_1.style.zIndex="9999";
+			myicon.style.left="-50px";
+			myicon.style.top="300px";
+
+
+		}else{
+			s1_1.style.marginLeft = "-200px";
+			myicon.style.left="50px";
+			myicon.style.top="300px";
+		}
+
+
+      if (scrollH>699) {
+         myicon.style.top="300px";
+         myicon.style.left="570px";
+         
+      }else{
+      	myicon.style.top="300px";
+      	myicon.style.left="-50px";
+      
+      }
+
+
+
+      if (scrollH>1399) {
+         myicon.style.top="500px";
+         myicon.style.left="-70px";
+
+      }else{
+         myicon.style.top="300px";
+         myicon.style.left="570px";
+      }
+
+
+      if (scrollH>1499) {
+         myicon.style.left="50px";
+         myicon.style.top="420px";
+      }else{
+         myicon.style.left="-70px";
+      myicon.style.top="500px";
+   }
+
+
+
+   if (scrollH>2499) {
+      myicon.style.left="500px";
+      myicon.style.top="300px";
+      myicon.style.width="150px";
+      myicon.style.height="150px";
+
+   }else{
+      myicon.style.left="50px";
+       myicon.style.top="420px";
+      myicon.style.width="200x";
+      myicon.style.height="200px";
+   }
+
+      if (scrollH>2999) {
+      myicon.style.left="80px";
+   myicon.style.top="200px";
+}else{
+   myicon.style.top="300px";
+   myicon.style.left="500px";
+}
+
+
+if (scrollH>3199) {
+   myicon.style.top="500px";
+   myicon.style.left="80px";
+}else{
+   myicon.style.top="200px";
+   myicon.style.left="80px";
+
+}
+
+
+if (scrollH>3499) {
+   myicon.style.top="300px";
+   myicon.style.left="-40px";
+   
+}else{
+  myicon.style.top="500px";
+   myicon.style.left="80px";
+  
+}
+
+
+
+
+
+
+
+
+
+	
+
+
+}
+
+</script>
+</body>
+
+
+
